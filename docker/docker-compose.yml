@@ -1,0 +1,15 @@
+version : '3.0' 
+
+services: 
+  app: 
+    build:
+      context: .
+      dockerfile: ./Dockerfile
+
+    working_dir:
+      /app
+
+    volumes:
+      - ./..:/app
+
+    image: audio-fingerprint:latest
